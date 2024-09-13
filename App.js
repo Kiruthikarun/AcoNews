@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
-const API_KEY = 'ff3e88f43e981c35bdc2f8cf7e8d533c';
+const API_KEY = api_key;
 app.get('/news/headlines', async (req, res) => {
   const { country, lang, category, from, to } = req.query;
   let apiUrl = `https://gnews.io/api/v4/top-headlines?apikey=${API_KEY}`;
